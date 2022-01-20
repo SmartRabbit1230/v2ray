@@ -135,7 +135,7 @@ create_vmess_URL_config() {
 		cat >/etc/v2ray/vmess_qr.json <<-EOF
 			{
 				"v": "2",
-				"ps": "233v2.com_${domain}",
+				"ps": "freedom|${domain}",
 				"add": "${domain}",
 				"port": "443",
 				"id": "${v2ray_id}",
@@ -156,7 +156,7 @@ create_vmess_URL_config() {
 		cat >/etc/v2ray/vmess_qr.json <<-EOF
 			{
 				"v": "2",
-				"ps": "233v2.com_${ip}",
+				"ps": "freedom|${ip}",
 				"add": "${ip}",
 				"port": "${v2ray_port}",
 				"id": "${v2ray_id}",
@@ -2281,7 +2281,7 @@ get_v2ray_vmess_URL_link() {
 		local vmess="vmess://$(cat /etc/v2ray/vmess_qr.json | base64 -w 0)"
 	fi
 	echo
-	echo "---------- V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------"
+	echo "---------- Update By SmartRabbit V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------"
 	echo
 	echo -e ${cyan}$vmess${none}
 	echo
@@ -2337,13 +2337,13 @@ install_bbr() {
 }
 install_lotserver() {
 	# https://moeclub.org/2017/03/08/14/
-	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh"
+	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/SmartRabbit1230/serverSpeeser_Install/master/appex.sh"
 	bash /tmp/appex.sh 'install'
 	rm -rf /tmp/appex.sh
 }
 uninstall_lotserver() {
 	# https://moeclub.org/2017/03/08/14/
-	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh"
+	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/SmartRabbit1230/serverSpeeser_Install/master/appex.sh"
 	bash /tmp/appex.sh 'uninstall'
 	rm -rf /tmp/appex.sh
 }
@@ -2382,9 +2382,9 @@ update_v2ray() {
 }
 update_v2ray.sh() {
 	if [[ $_test ]]; then
-		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/233boy/v2ray/test/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
+		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/SmartRabbit1230/v2ray/test/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
 	else
-		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/233boy/v2ray/master/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
+		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/SmartRabbit1230/v2ray/master/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
 	fi
 
 	if [[ ! $latest_version ]]; then
