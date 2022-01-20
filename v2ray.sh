@@ -2281,7 +2281,7 @@ get_v2ray_vmess_URL_link() {
 		local vmess="vmess://$(cat /etc/v2ray/vmess_qr.json | base64 -w 0)"
 	fi
 	echo
-	echo "---------- Update By SmartRabbit V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------"
+	echo "---------- Update By SmartRabbit |V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------"
 	echo
 	echo -e ${cyan}$vmess${none}
 	echo
