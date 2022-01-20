@@ -7,7 +7,7 @@ magenta='\e[95m'
 cyan='\e[96m'
 none='\e[0m'
 
-# Root
+# Root Test
 [[ $(id -u) != 0 ]] && echo -e " 哎呀……请使用 ${red}root ${none}用户运行 ${yellow}~(^_^) ${none}" && exit 1
 
 _version="v3.20-test"
@@ -2737,7 +2737,7 @@ _help() {
 
 	${green}v2ray update $none更新 V2Ray
 
-	${green}v2ray update.sh $none更新 V2Ray 管理脚本1
+	${green}v2ray update.sh $none更新 V2Ray 管理脚本
 
 	${green}v2ray uninstall $none卸载 V2Ray
 "
